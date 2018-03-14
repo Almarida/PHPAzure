@@ -1,4 +1,13 @@
 <?php
+echo "Are you sure you want to do this?  Type 'yes' to continue: ";
+$handle = fopen ("php://stdin","r");
+$line = fgets($handle);
+if(trim($line) != 'yes'){
+    echo "ABORTING!\n";
+    exit;
+}
+echo "\n";
+echo "Thank you, continuing...\n";
 // PHP Data Objects(PDO) Sample Code:
 try {
 //    $conn = new PDO("sqlsrv:server = tcp:testdbca.database.windows.net,1433; Database = testdbc", "chaggarty", "!@Welcome123");
