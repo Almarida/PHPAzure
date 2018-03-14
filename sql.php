@@ -14,13 +14,12 @@ $connectionInfo = array("UID" => "chaggarty@testdbca", "pwd" => "!@Welcome123", 
 $serverName = "tcp:testdbca.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+echo "starting sql";
+$sql = 'SELECT * FROM Test';
+$query = $conn->prepare($sql);
+$query->execute();
 
-
-    $sql = 'SELECT * FROM Test';
-    $query = $conn->prepare($sql);
-    $query->execute();
-
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
 echo "starting loop";
 foreach ($result as $r)
 {
