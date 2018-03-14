@@ -35,7 +35,7 @@ try {
     VALUES ('5', 'Doe')";
     // use exec() because no results are returned
     $conn->exec($sql);
-    echo "New record created successfully";
+    echo "<br>New record created successfully";
     }
 catch(PDOException $e)
     {
