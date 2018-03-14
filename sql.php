@@ -14,4 +14,7 @@ $connectionInfo = array("UID" => "chaggarty@testdbca", "pwd" => "!@Welcome123", 
 $serverName = "tcp:testdbca.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+
+$query = "select username from test where ID=1";
+echo $query
 ?>
