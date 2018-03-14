@@ -15,10 +15,20 @@ $serverName = "tcp:testdbca.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-$query = "select username from test where ID=1";
-echo $query
-$statement = $conn->query("select username from test where ID=1");
-$statement->execute();
-$result = $statement->fetchAll(PDO::FETCH_NUM);
-echo $result 
+try
+{
+    $sql = 'SELECT * FROM Test';
+    $query = $conn->prepare($sql);
+    $query->execute();
+
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+}catch (Exception $e)
+{
+    die('Cant fetch rows.');
+}
+
+foreach ($result as $r)
+{
+    print_r($r); // do what you want here
+}
 ?>
