@@ -27,5 +27,20 @@ foreach ($result as $r)
     print_r($r); // do what you want here
     echo "<br>";
 }
-echo "<br>corey";
+echo "<br>Done with select";
+echo "<br>Inserting data";
+
+try {
+    $sql = "INSERT INTO test (id, username)
+    VALUES ('5', 'Doe')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "New record created successfully";
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
+
+$conn = null;
 ?>
