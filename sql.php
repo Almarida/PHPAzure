@@ -8,7 +8,7 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-echo "connected!";
+echo "connected!<br>";
 // SQL Server Extension Sample Code:
 $connectionInfo = array("UID" => "chaggarty@testdbca", "pwd" => "!@Welcome123", "Database" => "testdbc", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:testdbca.database.windows.net,1433";
