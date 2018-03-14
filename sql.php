@@ -15,17 +15,12 @@ $serverName = "tcp:testdbca.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-try
-{
+
     $sql = 'SELECT * FROM Test';
     $query = $conn->prepare($sql);
     $query->execute();
 
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
-}catch (Exception $e)
-{
-    die('Cant fetch rows.');
-}
 
 foreach ($result as $r)
 {
