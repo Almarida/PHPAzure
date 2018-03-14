@@ -12,3 +12,6 @@ if( $conn ) {
      die( print_r( sqlsrv_errors(), true));
 }
 // SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "chaggarty@testdbca", "pwd" => "{your_password_here}", "Database" => "testdbc", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:testdbca.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
