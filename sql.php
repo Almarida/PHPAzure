@@ -26,4 +26,5 @@ foreach ($result as $r)
 {
     print_r($r); // do what you want here
 }
+echo "corey";
 ?>
