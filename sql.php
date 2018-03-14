@@ -23,7 +23,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 echo "starting loop<br>";
 foreach ($result as $r)
 {
-    print_r($r); // do what you want here
+    print_r($r<br>); // do what you want here
 }
 echo "<br>corey";
 ?>
