@@ -14,3 +14,6 @@
         </p>
     </body>
 </html>
+
+<a href="index.php">Index Page</a>
+<a href="sql.php">Page 2</a>
