@@ -17,4 +17,8 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 $query = "select username from test where ID=1";
 echo $query
+$statement = $db->query("select username from test where ID=1");
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_NUM);
+echo $result 
 ?>
