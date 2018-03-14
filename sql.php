@@ -21,7 +21,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
     $query->execute();
 
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
-
+echo "starting loop";
 foreach ($result as $r)
 {
     print_r($r); // do what you want here
